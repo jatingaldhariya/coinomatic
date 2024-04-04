@@ -10,7 +10,7 @@ const Header = () => {
     <nav className="header">
       <Link to={"/"} className="site-logo">
         <img src={logoIcon} alt="Coinomatic" />
-        <h1>Coinomatic</h1>
+        <h1>Coinomatica</h1>
       </Link>
       <menu>
         <HashLink to={"/#home"}>Home</HashLink>
