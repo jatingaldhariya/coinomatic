@@ -1,0 +1,127 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+
+// Variables
+$font1: "Lato";
+$font2: "Poppins";
+$light: #fff;
+$dark: #000;
+$blue1: #00040a;
+$blue2: #24126a;
+$blue3: #3e80ff;
+$blue4: #f4f7fa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 400 1.2rem $font1;
+}
+
+//Page Info
+.pageInfo {
+  padding-top: 25px;
+  height: 300px;
+  background-image: linear-gradient(to right, $blue1, $blue2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > h3 {
+    font: 700 2.2rem $font2;
+    color: $light;
+  }
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+// Currency Setter
+.currencySelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+  > p {
+    margin-right: 8px;
+    font: 500 1.2rem $font1;
+    color: $blue2;
+  }
+
+  > select {
+    background-color: $blue2;
+    color: $light;
+    padding: 0.4rem;
+    border: none;
+    font: 400 1.2rem $font1;
+    border-radius: 10px;
+
+    > option {
+      background-color: $light;
+      border: 1px solid $blue2;
+      color: $blue2;
+    }
+  }
+}
+
+//Animations
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes imgUp {
+  to {
+    transform: translatey(-15px);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.positive {
+  color: green;
+  font: 600 0.8rem $font1;
+
+  &::before {
+    content: "\23F6";
+    height: 21px;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+  }
+}
+.p-wrapper {
+  background-color: rgba(194, 235, 193, 0.596);
+}
+.n-wrapper {
+  background-color: rgba(249, 207, 207, 0.632);
+}
+.negative {
+  color: rgb(255, 0, 0);
+  font: 600 0.8rem $font1;
+
+  &::before {
+    content: "\25BE";
+    height: 21px;
+    font-size: 1rem;
+  }
+}

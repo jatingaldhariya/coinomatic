@@ -1,0 +1,58 @@
+@import "./base.scss";
+
+// Logo font
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+.header {
+  width: 1200px;
+  $width: width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light;
+  padding: 0.8rem 2rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  position: fixed;
+  top: 0.8rem;
+  left: calc(50% - 600px);
+  z-index: 10;
+  border-radius: 200px;
+
+  > .site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+
+    > img {
+      width: 65px;
+    }
+
+    > h1 {
+      font: 500 2rem "Ubuntu";
+      color: $blue1;
+    }
+
+    &:hover {
+      transform: scale(102%);
+    }
+  }
+
+  > menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    > a {
+      text-decoration: none;
+      color: $blue1;
+      font: 700 1rem $font1;
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue3;
+        transform: scale(105%);
+      }
+    }
+  }
+}

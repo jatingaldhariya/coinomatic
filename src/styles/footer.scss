@@ -1,0 +1,23 @@
+@import './base.scss';
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: $blue1;
+    color: $light;
+    font: 700 1rem $font2;
+
+    >a{
+        margin-left: 8px;
+        font: 600 1rem $font2;
+        color: #ADC4D7;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover{
+            color: #c0999e;
+        }
+    }
+}

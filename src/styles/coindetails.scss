@@ -1,0 +1,396 @@
+@import "./base.scss";
+
+.coin-details-main {
+  width: 100%;
+  padding: 2rem 3rem;
+  padding-top: 7.2rem;
+  scroll-behavior: smooth;
+
+  > .container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .coin-details {
+    width: 100%;
+
+    > .breadcrumbs {
+      font: 800 0.8rem $font1;
+      color: $blue2;
+
+      > a {
+        font: 800 0.8rem $font1;
+        text-decoration: none;
+        color: $blue2;
+        transition: 0.3s;
+
+        &:hover {
+          color: $blue3;
+        }
+      }
+      > span {
+        font: 900 0.8rem $font1;
+        color: rgb(179, 195, 222);
+      }
+    }
+
+    > .update-detail {
+      margin-top: 2px;
+      font: 400 0.8rem $font1;
+      color: rgb(96, 102, 115);
+    }
+
+    > .coin-profile {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-top: 1rem;
+      gap: 5px;
+
+      > img {
+        width: 40px;
+      }
+      > h3 {
+        font: 700 1.2rem $font2;
+        color: $blue2;
+      }
+      > h4 {
+        font: 600 1rem $font1;
+        text-transform: uppercase;
+        color: rgb(93, 125, 139);
+      }
+      > p {
+        font: 600 0.9rem $font1;
+        background-color: $blue4;
+        border-radius: 5px;
+        padding: 0.1rem 0.3rem;
+        border: 1px solid rgb(179, 195, 222);
+      }
+    }
+
+    > .coin-price {
+      display: flex;
+      justify-content: left;
+      align-items: end;
+      margin-top: 1rem;
+
+      > h2 {
+        font: 600 2.2rem $font2;
+        color: #134bb2;
+        line-height: 100%;
+        margin-right: 10px;
+      }
+      > p {
+        font: 600 1.2rem $font1;
+        margin-bottom: 2px;
+
+        &::before {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    > .chart-container {
+      width: 100%;
+      margin-top: 1.2rem;
+      margin-bottom: 1.2rem;
+      padding: 1rem 0.5rem;
+      border: 1px solid rgba(155, 156, 158, 0.358);
+      overflow-x: auto;
+
+      .chart-btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .currencySelector > select {
+          font: 600 1rem $font1;
+          background-color: rgba(224, 227, 229, 0.883);
+          border: none;
+          padding: 0.3rem;
+          border-radius: 10px;
+          cursor: pointer;
+          border: 1px solid rgba(187, 188, 189, 0.686);
+          transition: 0.3s;
+          color: $dark;
+
+          &:hover {
+            background-color: rgba(195, 197, 197, 0.869);
+          }
+        }
+
+        .daySelector {
+          display: flex;
+          gap: 8px;
+          > button {
+            font: 600 1rem $font1;
+            background-color: rgba(224, 227, 229, 0.883);
+            border: none;
+            padding: 0.3rem;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 1px solid rgba(187, 188, 189, 0.686);
+            transition: 0.3s;
+
+            &:hover {
+              background-color: rgba(195, 197, 197, 0.869);
+            }
+          }
+        }
+      }
+
+      > canvas {
+        width: 100% !important;
+      }
+    }
+
+    .infoRow {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .coinDetails-cards {
+      width: 40%;
+      padding: 0rem 1rem;
+      border-right: 1px solid rgba(155, 156, 158, 0.358);
+    }
+
+    .coinDetails-cards .market-data,
+    .coinDetails-cards .coin-historical {
+      margin-top: 25px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 10px;
+
+      > h4 {
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+        font: 600 1.1rem $font1;
+        color: $blue1;
+      }
+    }
+
+    .data-row {
+      margin-top: 0.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem;
+      border-bottom: 1px solid #9b9c9a3a;
+
+      > h6 {
+        font: 600 0.94rem $font1;
+        color: #9b9c9a;
+      }
+      > p {
+        font: 700 1rem $font1;
+        color: $blue1;
+      }
+    }
+
+    .coinDetails-section {
+      width: 60%;
+      padding: 0.8rem 1rem;
+
+      .info-headding {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+        font: 600 1.1rem $font1;
+        color: $blue1;
+      }
+
+      > .coin-info {
+        display: flex;
+        flex-wrap: wrap;
+
+        > .data-row {
+          border-bottom: none;
+          width: fit-content;
+          gap: 10px;
+        }
+        .imp-links {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 5px;
+          > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            background-color: rgba(224, 227, 229, 0.883);
+            border: none;
+            border-radius: 50px;
+            font: 500 0.8rem $font1;
+            text-decoration: none;
+            color: $blue1;
+            text-transform: capitalize;
+            transition: 0.3s;
+
+            > svg {
+              margin-right: 0.2rem;
+              font-size: 0.8rem;
+            }
+
+            &:hover {
+              background-color: rgb(213, 215, 217);
+            }
+          }
+        }
+      }
+
+      > .past-performance {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.6rem;
+
+        > .performance-details {
+          margin-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: left;
+          align-items: center;
+          gap: 10px;
+
+          > .per-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            align-items: center;
+            border: 1px solid rgba(224, 227, 229, 0.883);
+            border-radius: 10px;
+            padding: 0.3rem 0.67rem;
+
+            > h3 {
+              font: 600 1rem $font1;
+            }
+            > h5 {
+              font: 900 0.8rem $font1;
+            }
+          }
+        }
+      }
+      .market-sentimates {
+        width: 100%;
+        margin-top: 1.8rem;
+        > div {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          > p {
+            font: 700 1.2rem $font1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(242, 244, 245, 0.78);
+            border-radius: 10px;
+            border: 1px solid rgba(214, 215, 217, 0.883);
+            padding: 0.5rem 0.8rem;
+
+            > svg {
+              font: 900 1.5rem $font1;
+            }
+          }
+        }
+      }
+      .coin-categories {
+        width: 100%;
+        margin-top: 1.5rem;
+        > div {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          > p {
+            font: 400 1.2rem $font1;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 5px;
+            background-color: rgba(242, 244, 245, 0.78);
+            border-radius: 10px;
+            border: 1px solid rgba(214, 215, 217, 0.883);
+            padding: 0.3rem 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.related-coins {
+  width: 100%;
+  padding: 2rem 3rem;
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  > a {
+    text-decoration: none;
+    cursor: pointer;
+
+    > .coinCard {
+      width: 280px;
+      height: 280px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 20px;
+      background-color: $light;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+      transition: 0.3s;
+
+      &:hover {
+        scale: 101%;
+        box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+      }
+
+      > img {
+        width: 80px;
+        height: 80px;
+      }
+
+      > h4 {
+        margin-top: 20px;
+        font: 500 1.2rem $font2;
+        color: $blue2;
+        text-align: center;
+        line-height: 110%;
+      }
+      > p {
+        font: 400 1rem $font1;
+        color: $blue3;
+        text-align: center;
+      }
+    }
+  }
+}

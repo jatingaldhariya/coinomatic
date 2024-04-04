@@ -1,0 +1,151 @@
+@import "./base.scss";
+
+.coins-main {
+  padding: 2rem 5rem;
+
+  > table.coins-info-table {
+    max-width: 1600px;
+    width: 100%;
+
+    border: 1px solid #ddd;
+    margin: auto;
+    border-radius: 20px;
+    border-spacing: 0;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+
+    > .conHeadings {
+      background-color: $blue2;
+      color: $light;
+      text-align: left;
+
+      > th:first-child {
+        border-radius: 20px 0 0 0;
+        padding-left: 1rem;
+      }
+      > th:last-child {
+        border-radius: 0 20px 0 0;
+      }
+
+      > th {
+        padding: 0.5rem 0.5rem;
+        padding-left: 0.8rem;
+      }
+    }
+
+    .coinRow {
+      padding: 5rem;
+
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+      }
+
+      > .coin-profile {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 5px;
+
+        > a {
+          text-decoration: none;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+
+          > img {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+          }
+          > .coin-name {
+            font: 600 1.2rem $font2;
+            color: $blue2;
+            &:hover {
+              color: #647c90;
+            }
+          }
+          > .coin-symbol {
+            font: 600 1rem $font1;
+            color: $blue3;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      > .coin-price {
+        > span {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          font: 600 0.8rem $font1;
+        }
+      }
+
+      > td {
+        text-align: left;
+        padding: 1rem 0.5rem;
+        font: 600 1.2rem $font1;
+        color: $blue2;
+        border-bottom: 1px solid rgb(243, 229, 229);
+        transition: 0.3s;
+      }
+      > td:first-child {
+        padding-left: 1rem;
+      }
+    }
+
+    .coinRow:nth-child(even) {
+      background-color: $blue4;
+    }
+  }
+}
+
+.pagination {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+
+  > button {
+    background-color: $blue2;
+    color: $light;
+    font: 500 1rem $font1;
+    padding: 0.5rem;
+    border: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+
+    &:hover {
+      background-color: #685fa3;
+      color: $light;
+    }
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 20px;
+    height: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border: 1px solid #B9B7BD;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #685fa3;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a19bc9;
+  }
+}

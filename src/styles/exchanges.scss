@@ -1,0 +1,63 @@
+@import "./base.scss";
+
+.exchangesCount {
+  margin: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  font: 700 1.2rem $font1;
+  color: $blue2;
+}
+
+.exchanges-main {
+  width: 100%;
+  background-color: $light;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: -50px;
+  border-radius: 20px 20px 0 0;
+  padding: 3rem 4rem;
+
+  > a {
+    text-decoration: none;
+
+    > .exchangeCard {
+      width: 280px;
+      height: 280px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 20px;
+      background-color: $light;
+      box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+      transition: 0.3s;
+
+      &:hover {
+        scale: 101%;
+        box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+      }
+
+      > img {
+        width: 80px;
+        height: 80px;
+      }
+
+      > h4 {
+        margin-top: 20px;
+        font: 500 1.2rem $font2;
+        color: $blue2;
+        text-align: center;
+        line-height: 110%;
+      }
+      > p {
+        font: 400 1rem $font1;
+        color: $blue3;
+        text-align: center;
+      }
+    }
+  }
+}
