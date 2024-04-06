@@ -1,17 +1,20 @@
 @import "./base.scss";
 
 .coins-main {
-  padding: 2rem 5rem;
+  max-width: 1600px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 
   > table.coins-info-table {
     max-width: 1600px;
     width: 100%;
-
     border: 1px solid #ddd;
     margin: auto;
     border-radius: 20px;
     border-spacing: 0;
-    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 
     > .conHeadings {
       background-color: $blue2;
@@ -97,6 +100,29 @@
       background-color: $blue4;
     }
   }
+  /* Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    // border: 1px solid #b9b7bd;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $blue2;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a19bc9;
+    cursor: pointer;
+  }
 }
 
 .pagination {
@@ -118,7 +144,6 @@
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 5px;
-    
 
     &:hover {
       background-color: #685fa3;
@@ -126,7 +151,7 @@
     }
   }
 
-  /* width */
+  /* Scrollbar */
   &::-webkit-scrollbar {
     width: 20px;
     height: 10px;
@@ -134,7 +159,7 @@
 
   /* Track */
   &::-webkit-scrollbar-track {
-    border: 1px solid #B9B7BD;
+    border: 1px solid #b9b7bd;
     border-radius: 10px;
   }
 
@@ -147,5 +172,30 @@
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #a19bc9;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .coins-main {
+    max-width: 90%;
+    width: 90%;
+    height: 800px;
+    overflow-y: auto;
+
+    > table.coins-info-table {
+      max-width: 100%;
+      width: 100%;
+
+      .coinRow {
+        padding: 1rem;
+        > td {
+          padding: 1rem 0.2rem;
+        
+          > td:first-child {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
