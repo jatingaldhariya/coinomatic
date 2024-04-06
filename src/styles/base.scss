@@ -69,6 +69,37 @@ $blue4: #f4f7fa;
   }
 }
 
+.positive {
+  color: green;
+  font: 600 0.8rem $font1;
+
+  &::before {
+    content: "\23F6";
+    font-family: Arial, sans-serif;
+    height: 21px;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+  }
+}
+
+.negative {
+  color: rgb(255, 0, 0);
+  font: 600 0.8rem $font1;
+
+  &::before {
+    content: "\25BE";
+    height: 21px;
+    font-size: 1rem;
+  }
+}
+
+.p-wrapper {
+  background-color: rgba(194, 235, 193, 0.596);
+}
+.n-wrapper {
+  background-color: rgba(249, 207, 207, 0.632);
+}
+
 //Animations
 @keyframes gradient {
   0% {
@@ -95,33 +126,5 @@ $blue4: #f4f7fa;
   100% {
     transform: scale(1);
     opacity: 0;
-  }
-}
-
-.positive {
-  color: green;
-  font: 600 0.8rem $font1;
-
-  &::before {
-    content: "\23F6";
-    height: 21px;
-    font-size: 0.9rem;
-    padding-bottom: 5px;
-  }
-}
-.p-wrapper {
-  background-color: rgba(194, 235, 193, 0.596);
-}
-.n-wrapper {
-  background-color: rgba(249, 207, 207, 0.632);
-}
-.negative {
-  color: rgb(255, 0, 0);
-  font: 600 0.8rem $font1;
-
-  &::before {
-    content: "\25BE";
-    height: 21px;
-    font-size: 1rem;
   }
 }
