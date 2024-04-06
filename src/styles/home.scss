@@ -436,8 +436,8 @@
         height: 350px;
 
         > img {
-          width: 350px;
-          margin-left: -8px;
+          width: 320px;
+          margin-left: 0;
           animation: imgUp 1.8s linear alternate infinite;
         }
       }
@@ -498,8 +498,9 @@
   // About US
   .aboutus {
     width: 95%;
-    padding: 1.5rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 50px 10px 50px 10px;
+    text-align: center;
   }
 
   // Contact Us
