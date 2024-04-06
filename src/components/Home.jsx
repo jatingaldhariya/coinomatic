@@ -45,6 +45,7 @@ const Home = () => {
     const fetchGlobaldta = async () => {
       try {
         const { data } = await axios.get(`${server}/global`);
+        console.log(data.data);
         setGlobalStatics(data.data);
         setMarketCap(globalStatics.total_market_cap.usd);
         setVolume24(globalStatics.total_volume.btc);

@@ -1,23 +1,35 @@
-@import './base.scss';
+@import "./base.scss";
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: $blue1;
-    color: $light;
-    font: 700 1rem $font2;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: $blue1;
+  color: $light;
+  font: 700 1rem $font2;
 
-    >a{
-        margin-left: 8px;
-        font: 600 1rem $font2;
-        color: #ADC4D7;
-        text-decoration: none;
-        transition: 0.3s;
+  > a {
+    margin-left: 8px;
+    font: 600 1rem $font2;
+    color: #adc4d7;
+    text-decoration: none;
+    transition: 0.3s;
 
-        &:hover{
-            color: #c0999e;
-        }
+    &:hover {
+      color: #c0999e;
     }
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .footer {
+    padding: 2rem ;
+    flex-direction: column;
+    gap: 10px;
+    > a {
+        margin-left: 0;
+        font: 600 1.3rem $font2;
+    }
+  }
 }

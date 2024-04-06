@@ -4,8 +4,8 @@ import "../styles/footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      © Coinomatic 2024 | Developer :{"  "}
-      <a href="https://www.jatingaldhariya.in" target="_blank"> Jatin Galdhariya</a>.
+      <p>© Coinomatic 2024 | Developer :</p>
+      <a href="https://www.jatingaldhariya.in" target="_blank"> Jatin Galdhariya</a>
     </div>
   );
 };

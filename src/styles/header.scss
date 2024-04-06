@@ -5,7 +5,6 @@
 
 .header {
   width: 1200px;
-  $width: width;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +37,10 @@
     }
   }
 
+  > .mobilemenu {
+    display: none;
+  }
+
   > menu {
     display: flex;
     justify-content: space-between;
@@ -53,6 +56,71 @@
         color: $blue3;
         transform: scale(105%);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .header {
+    width: 100%;
+    flex-wrap: wrap;
+    left: 0%;
+    top: 0;
+    border-radius: 0px 0px 30px 30px;
+    padding: 0.5rem 1.5rem;
+
+    > .site-logo {
+      > img {
+        width: 50px;
+      }
+
+      > h1 {
+        font: 700 1.5rem "Ubuntu";
+      }
+    }
+    > .mobilemenu {
+      display: flex;
+      position: relative;
+      > button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        transition: 0.3s;
+
+        > svg {
+          font-size: 1.5rem;
+        }
+      }
+
+      > .menu {
+        width: 250px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1.5rem;
+        background-color: $light;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 20px;
+
+        > a {
+          text-decoration: none;
+          color: $blue1;
+          font: 700 1.2rem $font1;
+          transition: 0.3s;
+
+          &:hover,
+          &:focus {
+            color: $blue3;
+            transform: scale(105%);
+          }
+        }
+      }
+    }
+    > menu {
+      display: none;
     }
   }
 }
