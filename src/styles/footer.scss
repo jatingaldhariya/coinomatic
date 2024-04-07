@@ -24,10 +24,12 @@
 
 @media only screen and (max-width: 765px) {
   .footer {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     flex-direction: column;
     gap: 10px;
+    text-align: center;
     > a {
+        text-align: center;
         margin-left: 0;
         font: 600 1.3rem $font2;
     }
